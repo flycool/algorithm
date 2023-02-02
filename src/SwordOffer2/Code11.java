@@ -26,11 +26,25 @@ public class Code11 {
         return -1;
     }
 
+    public static int findMinNumsInArray2(int[] array) {
+        int l = 0, r = array.length - 1;
+        while (l < r) {
+            int m = (l + r) >>> 1;
+            if (array[m] > array[r]) {
+                l = m + 1;
+            } else if (array[m] < array[r]) {
+                r = m;
+            } else {
+                --r;
+            }
+        }
+        return array[l];
+    }
 
 
     public static void main(String[] args) {
         int[] a = {2, 2, 2, 0, 1};
-        int i = findMinNumsInArray(a);
+        int i = findMinNumsInArray2(a);
         System.out.println(i);
     }
 }
