@@ -25,7 +25,7 @@ public class Code23_SubArrayMaxSum {
         }
         int pre = arr[0];
         int max = arr[0];
-        for (int i = 0; i < arr.length; i++) {
+        for (int i = 1; i < arr.length; i++) {
             pre = Math.max(arr[i], arr[i] + pre);
             max = Math.max(pre, max);
         }
