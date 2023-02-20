@@ -23,10 +23,10 @@ public class Code16_MinDepth {
             ans = Math.min(ans, level);
         } else {
             if (root.left != null) {
-                wen(Tree.left, level + 1);
+                wen(root.left, level + 1);
             }
             if (root.right != null) {
-                wen(Tree.right, level + 1);
+                wen(root.right, level + 1);
             }
         }
     }
