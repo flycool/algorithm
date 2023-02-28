@@ -1,6 +1,6 @@
 package leetcode;
 
-public class P_0277_findStar {
+public class Code82_P_0277_findStar {
 
     //系统给定函数
     //know(i, j) i认识j，返回true，

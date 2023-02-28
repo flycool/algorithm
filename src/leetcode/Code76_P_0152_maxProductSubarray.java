@@ -7,7 +7,7 @@ package leetcode;
  * 3. dp[i]*dp[i-1]（最小）
  * 每个位置求两答案，最大和最小（考虑负数情况）
  */
-public class P_0152_maxProductSubarray {
+public class Code76_P_0152_maxProductSubarray {
 
     public double max(double[] arr) {
         if (arr == null || arr.length == 0) {

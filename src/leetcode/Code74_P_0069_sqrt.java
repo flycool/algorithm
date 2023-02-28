@@ -3,7 +3,7 @@ package leetcode;
 //74 leetcode 0069 Sqrt(x)
 //x开根号
 //二分，向下取整
-public class P_0069_sqrt {
+public class Code74_P_0069_sqrt {
 
     public int sqrt(int x) {
         if (x == 0) {

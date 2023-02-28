@@ -1,7 +1,7 @@
 package leetcode;
 
 //85 leetcode 0326 是否是3的幂
-public class p_0326_is3Mi {
+public class Code85_p_0326_is3Mi {
 
     public static boolean is3mi(int n) {
         if (n < 3) {

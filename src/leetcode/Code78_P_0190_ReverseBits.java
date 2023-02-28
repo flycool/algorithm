@@ -6,7 +6,7 @@ package leetcode;
  * 在16位里，n的高8位和n的低8位交换
  * 依次类推
  */
-public class P_0190_ReverseBits {
+public class Code78_P_0190_ReverseBits {
 
     public int reverseBits(int n) {
         n = (n >>> 16) | (n << 16);

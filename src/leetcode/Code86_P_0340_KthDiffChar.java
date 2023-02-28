@@ -2,7 +2,7 @@ package leetcode;
 
 //86 leetcode 0340 至多包含k个不同的字符
 //滑动窗口
-public class P_0340_KthDiffChar {
+public class Code86_P_0340_KthDiffChar {
 
     public int longestKthDiffChar(String s, int k) {
         if (s == null || s.length() == 0 || k < 1) {

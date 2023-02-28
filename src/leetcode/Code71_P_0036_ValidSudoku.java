@@ -2,7 +2,7 @@ package leetcode;
 
 //71 leetcode 0036 有效的数独
 //给定的数字是否是有效的数独，不需要解决
-public class P_0036_ValidSudoku {
+public class Code71_P_0036_ValidSudoku {
 
     public boolean isValidSudoku(char[][] board) {
         boolean[][] row = new boolean[9][10];// 每行

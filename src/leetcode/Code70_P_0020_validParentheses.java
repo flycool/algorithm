@@ -6,7 +6,7 @@ import java.util.Stack;
  * 70 leetcode 0020 有效的括号
  * 栈
  */
-public class P_0020_validParentheses {
+public class Code70_P_0020_validParentheses {
 
     public boolean isValid(String s) {
         if (s == null || s.length() == 0) {

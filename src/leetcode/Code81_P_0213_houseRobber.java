@@ -1,7 +1,7 @@
 package leetcode;
 
 //81 leetcode 0213 打家劫舍2
-public class P_0213_houseRobber {
+public class Code81_P_0213_houseRobber {
 
     // 可能性 0~n-2 , 1~n-1 取max
     public int houseRobber2(int[] nums) {

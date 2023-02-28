@@ -1,7 +1,7 @@
 package leetcode;
 
 //72 leetcod 0037 解数独
-public class P_0036_solveSudoku {
+public class Code72_P_0037_solveSudoku {
 
     public void solveSudoku(char[][] board) {
         boolean[][] row = new boolean[9][10];

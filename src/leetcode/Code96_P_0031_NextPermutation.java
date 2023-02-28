@@ -5,7 +5,7 @@ package leetcode;
  * 给定一个数组，
  * 返回它全排列的下一个状态是什么（状态按字典序排列）
  */
-public class P_0031_NextPermutation {
+public class Code96_P_0031_NextPermutation {
 
     public void nextPermutation(int[] arr) {
         int n = arr.length;

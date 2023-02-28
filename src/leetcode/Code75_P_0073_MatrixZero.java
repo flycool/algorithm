@@ -1,7 +1,7 @@
 package leetcode;
 
 //75 leetcode 0073 矩阵置零 （像炸弹人游戏）
-public class P_0073_MatrixZero {
+public class Code75_P_0073_MatrixZero {
 
     public int[][] zeroMatrix(int[][] matrix) {
         boolean rowZero = false;

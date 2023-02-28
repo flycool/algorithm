@@ -6,7 +6,7 @@ package leetcode;
  * （插空法）
  * 跳过一些重复试的数
  */
-public class P_0204_countPrimes {
+public class Code79_P_0204_countPrimes {
 
     public int countPrimes(int n) {
         if (n < 3) {

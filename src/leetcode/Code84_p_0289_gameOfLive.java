@@ -4,7 +4,7 @@ package leetcode;
  * 84 leetcode 0289 生命游戏
  * 把0，1变成32位，用倒数第二位标记下一轮的状态
  */
-public class p_0289_gameOfLive {
+public class Code84_p_0289_gameOfLive {
 
     public void gameOfLive(int[][] arr) {
         int n = arr.length;

@@ -9,7 +9,7 @@ package leetcode;
  * ...
  * n/5 + n/25 + n/125 + ...直到n为0
  */
-public class P_0172_Factorial {
+public class Code77_P_0172_Factorial {
 
     public int FactorialTailingZeros(int n) {
         int ans = 0;
