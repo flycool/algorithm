@@ -9,7 +9,7 @@ package interview2022;
  * 3. 区域内部（不算区域整体的4条边界），不能有任何砖块的边界线（从上一直贯穿到下）
  * 返回符合三条规则下，铺满n行m列的区域，有多少种不同的摆放方法
  */
-public class Code09_WayToBuildWall {
+public class Code20_WayToBuildWall {
 
     public long[] r = {0, 1, 2, 4, 8};
 

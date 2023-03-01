@@ -6,7 +6,7 @@ package interview2022;
  * 再给定一个数target，
  * 请问最后算出target的方法数是多少
  */
-public class Code24_TargetSumWay {
+public class Code35_TargetSumWay {
 
     public int findTargetSumWays(int[] arr, int s) {
         return process(arr, 0, s);

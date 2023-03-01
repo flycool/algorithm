@@ -9,7 +9,7 @@ package interview2022;
  * 返回如果统一所有黑洞的半径，最大半径是多少，
  * 依然能保证飞船从(0, 0)能到达(x, y)
  */
-public class Code04_BlackHoles {
+public class Code10_BlackHoles {
 
     //二分法， 并查集
 }

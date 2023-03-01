@@ -1,6 +1,5 @@
 package interview2022;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -14,7 +13,7 @@ import java.util.List;
  * 这样一来，所有的点都可以用 [0，36000) 范围上的数字表示
  * 那么任意三个点都可以组成一个三角形，返回能组成钝角三角形的数量
  */
-public class Code07_HowManyObtuseAngles {
+public class Code17_HowManyObtuseAngles {
 
     public long obtuseAngles(int[] arr) {
         int n = arr.length;

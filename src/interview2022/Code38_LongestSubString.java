@@ -1,7 +1,7 @@
 package interview2022;
 
 //求一个字符串中，最长无重复字符子串长度
-public class Code26_LongestSubString {
+public class Code38_LongestSubString {
 
     public int longestSubString(String s) {
         if (s == null || "".equals(s)) {

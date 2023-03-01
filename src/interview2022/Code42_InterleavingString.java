@@ -5,7 +5,7 @@ package interview2022;
  * 两个字符串的顺序不变
  * （样本对应模型）
  */
-public class Code29_InterleavingString {
+public class Code42_InterleavingString {
 
     public boolean interleavingString(String s1, String s2, String s3) {
         int len1 = s1.length();

@@ -9,7 +9,7 @@ import java.util.Arrays;
  * 一局比赛只有两个人
  * 返回最多可以同时又多少场比赛
  */
-public class Code27_MaxPairGame {
+public class Code39_MaxPairGame {
 
     //窗口
     public int maxPairGame(int[] arr, int k) {

@@ -7,7 +7,7 @@ package interview2022;
  * 那么1，3，1和1，1，3和3，1，1的放置方法，也认为是一种方法
  * 如上的设定下，返回有多少种放置方法
  */
-public class Code08_SplitApples {
+public class Code18_SplitApples {
 
     public int splitApples1(int apples, int plates) {
         return process1(1, apples, plates);

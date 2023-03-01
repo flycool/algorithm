@@ -7,7 +7,7 @@ package interview2022;
  * 请问谁有必胜的策略
  * （打表法）
  */
-public class Code19_WhoWin21Balls {
+public class Code31_WhoWin21Balls {
 
     public String whoWin(int balls) {
         return process(0, balls, 0, 0);

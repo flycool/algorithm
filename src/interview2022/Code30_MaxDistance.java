@@ -5,7 +5,7 @@ package interview2022;
 一颗二叉树的直径长度是任意连个结点路径长度中的最大值。
 这条路径可能穿过也可能不穿过根结点。
  */
-public class Code18_MaxDistance {
+public class Code30_MaxDistance {
 
     public class TreeNode {
         public int val;

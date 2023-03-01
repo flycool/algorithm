@@ -12,7 +12,7 @@ import java.util.Arrays;
  * 给定一个会议数组，返回是否安排的会议列表
  * （线段树）https://github.com/algorithmzuo/algorithmbasic2020/tree/master/src/class31
  */
-public class Code17_MeetingTime {
+public class Code29_MeetingTime {
 
     public ArrayList<int[]> arrange(int[][] meetings) {
         int n = meetings.length;

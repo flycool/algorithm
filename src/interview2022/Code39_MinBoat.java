@@ -9,7 +9,7 @@ import java.util.Arrays;
  * 想让所有的人同时过河，并且用最好的分配方法让船尽量少
  * 返回最少的船数
  */
-public class Code22_MinBoat {
+public class Code39_MinBoat {
 
     public int minBoat(int[] arr, int limit) {
         if (arr == null || arr.length == 0) {

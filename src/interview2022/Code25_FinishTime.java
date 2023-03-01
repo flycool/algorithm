@@ -14,7 +14,7 @@ import java.util.Queue;
  * 输入可以保证没有循环依赖
  * （拓扑排序）
  */
-public class Code14_FinishTime {
+public class Code25_FinishTime {
 
     public int[] finishTime(int n, int[] time, int[][] matrix) {
         ArrayList<ArrayList<Integer>> nexts = new ArrayList<>();

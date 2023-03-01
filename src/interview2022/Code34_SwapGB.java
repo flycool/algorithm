@@ -6,7 +6,7 @@ package interview2022;
  * 但是只能在相邻字符之间进行交换操作，
  * 返回至少需要交换几次
  */
-public class Code21_SwapGB {
+public class Code34_SwapGB {
 
     public int minStep(String s) {
         if (s == null || s.equals("")) {

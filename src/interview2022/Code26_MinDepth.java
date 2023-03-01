@@ -1,7 +1,7 @@
 package interview2022;
 
 //求二叉树的最小深度
-public class Code16_MinDepth {
+public class Code26_MinDepth {
 
     public class Tree {
         public int val;

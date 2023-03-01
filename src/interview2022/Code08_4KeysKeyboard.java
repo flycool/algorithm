@@ -1,7 +1,7 @@
 package interview2022;
 
 // https://leetcode.com/problems/4-keys-keyboard/
-public class Code03_4KeysKeyboard {
+public class Code08_4KeysKeyboard {
 
     public int maxA(int n) {
         int[] dp = new int[n];

@@ -10,7 +10,7 @@ package interview2022;
  * 将x从数组nums中移除
  * 在执行m步操作后，返回最大分数。
  */
-public class Code11_MaxScore {
+public class Code22_MaxScore {
 
     public int maxScore(int[] nums, int[] multipliers) {
         return process(nums, multipliers, 0, nums.length - 1);

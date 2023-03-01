@@ -21,7 +21,7 @@ import java.util.List;
  * 来源：力扣（LeetCode）
  * 链接：https://leetcode.cn/problems/cut-off-trees-for-golf-event
  */
-public class Code06_CutOffTreeForGolfEvent {
+public class Code15_CutOffTreeForGolfEvent {
 
     public static int cutOffTree(List<List<Integer>> forest) {
         int n = forest.size();

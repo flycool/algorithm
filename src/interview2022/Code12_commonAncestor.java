@@ -8,7 +8,7 @@ import java.util.HashSet;
  * 给定一个整型数组arr， arr里放着不同的值，每个值一定在树上，
  * 返回数组里所有值的最低公共祖先
  */
-public class Code05 {
+public class Code12_commonAncestor {
 
     public static void main(String[] args) {
         System.out.println(12);

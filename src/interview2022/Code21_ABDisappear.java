@@ -7,7 +7,7 @@ package interview2022;
  * 你的任务是决定一种消除的顺序，最后让str消除到尽可能的短
  * 返回尽可能短的剩余字符串
  */
-public class Code10_ABDisappear {
+public class Code21_ABDisappear {
 
     public String disappear(String s) {
         char[] str = s.toCharArray();

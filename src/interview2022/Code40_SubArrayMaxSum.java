@@ -1,7 +1,7 @@
 package interview2022;
 
 //返回一个数组中，子数组最大累加和
-public class Code23_SubArrayMaxSum {
+public class Code40_SubArrayMaxSum {
 
     public int subArrayMaxSum(int[] arr) {
         if (arr == null || arr.length == 0) {

@@ -10,7 +10,7 @@ package interview2022;
  * 补充规则：
  * 相邻孩子的分数一样，糖必须一样
  */
-public class Code28_Candy {
+public class Code41_Candy {
 
     public int candy(int[] arr) {
         if (arr == null || arr.length == 0) {

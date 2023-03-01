@@ -6,7 +6,7 @@ package interview2022;
  * 第i个司机去B可得收入为income[i][1]
  * 返回所有调度方案中能使所有司机收入最高的方案，是多少钱
  */
-public class Code25_Drive {
+public class Code36_Drive {
 
     public int maxMoney(int[][] income) {
         int n = income.length;
