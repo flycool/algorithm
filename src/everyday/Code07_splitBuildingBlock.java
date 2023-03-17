@@ -19,7 +19,7 @@ public class Code07_splitBuildingBlock {
         int n = arr.length;
         Arrays.sort(arr);
         int splits = 0;
-        int[] needs = new int[n];
+        int[] needs = new int[n]; // 存储堆之间的差距
         int size = 0;
         for (int i = 1; i < n; i++) {
             if (arr[i] - arr[i - 1] > x) {// 大于x，另起一堆
@@ -32,7 +32,7 @@ public class Code07_splitBuildingBlock {
         }
         Arrays.sort(needs, 0, size);
         for (int i = 0; i < size; i++) {
-            int need = (needs[i] - 1) / x;
+            int need = (needs[i] - 1) / x;//需要几个魔法积木
             if (k >= need) {
                 splits--;
                 k -= need;
