@@ -26,13 +26,15 @@ public class Code90_Ratio01Split {
                 ans[i] = i + 1;
             } else { //0和1都有
                 int gcd = gcd(zero, one);
+                // zero = 10 , one = 20
+                // a = 10/10, b = 20/10
                 int a = zero / gcd;
                 int b = one / gcd;
                 // a/b 比例，之前有多少前缀拥有
-                if (!map.containsKey(a)) {
+                if (!map.containsKey(a)) { // 分子
                     map.put(a, new HashMap<>());
                 }
-                if (!map.get(a).containsKey(b)) {
+                if (!map.get(a).containsKey(b)) { //有这个分母
                     map.get(a).put(b, 1);
                 } else {
                     //把ans提前+1，直接取出就是答案

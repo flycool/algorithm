@@ -8,6 +8,7 @@ package everyday;
  * 假设所有的小朋友坐成一个环形,
  * 返回在不破坏上一条规则的情况下,需要的最少糖果数
  * （找到洼地，分一块糖，求左右坡）
+ * （组成洼地为头尾的数组）
  */
 public class Code24_circleCandy {
 
@@ -19,7 +20,7 @@ public class Code24_circleCandy {
             return 1;
         }
         int n = arr.length;
-        int minIndex = 0;
+        int minIndex = 0;//找到局部的最小值
         for (int i = 0; i < n; i++) {
             if (arr[i] <= arr[lastIndex(i, n)] && arr[i] <= arr[nextIndex(i, n)]) {
                 minIndex = i;
