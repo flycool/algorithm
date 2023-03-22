@@ -7,7 +7,7 @@ package everyday;
  * 输出：结果代表x的n次方
  * (把n二进制化)
  */
-public class Involve_leetcode14_ {
+public class Involve_leetcode14_MyPow {
 
     public static double f(double x, int n) {
         if (n == 0) {

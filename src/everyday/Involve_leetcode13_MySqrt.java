@@ -7,7 +7,7 @@ package everyday;
  * 输出：开平方的结果（向下取整）
  * (二分)
  */
-public class Involve_leetcode13_ {
+public class Involve_leetcode13_MySqrt {
 
     public int f(int x) {
         if (x == 0) {
