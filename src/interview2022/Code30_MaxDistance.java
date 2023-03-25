@@ -16,6 +16,7 @@ public class Code30_MaxDistance {
     public class Info {
         public int maxDistance;
         public int height;
+
         public Info(int maxDistance, int height) {
             this.maxDistance = maxDistance;
             this.height = height;
@@ -37,7 +38,7 @@ public class Code30_MaxDistance {
         //与x无关
         int p1 = Math.max(leftInfo.maxDistance, rightInfo.maxDistance);
         //与x有关
-        int p2 = leftInfo.height + rightInfo.height;
+        int p2 = leftInfo.height + rightInfo.height + 1;
         int maxDistance = Math.max(p1, p2);
         return new Info(maxDistance, height);
 

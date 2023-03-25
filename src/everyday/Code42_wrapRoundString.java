@@ -11,6 +11,7 @@ package everyday;
 public class Code42_wrapRoundString {
 
     public int findSubStringInWrapRoundString(String str) {
+
         char[] p = str.toCharArray();
         int n = p.length;
         int len = 1;//连续字长成长的长度

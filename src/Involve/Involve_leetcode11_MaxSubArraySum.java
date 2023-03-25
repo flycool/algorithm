@@ -1,4 +1,4 @@
-package everyday;
+package Involve;
 
 import java.util.Currency;
 
@@ -14,8 +14,8 @@ public class Involve_leetcode11_MaxSubArraySum {
         }
         int n = arr.length;
         int ans = Integer.MIN_VALUE;
-        int cur = arr[0];
-        for (int i = 1; i < n; i++) {
+        int cur = 0;
+        for (int i = 0; i < n; i++) {
             cur += arr[i];
             ans = Math.max(ans, cur);
             cur = Math.max(cur, 0);
