@@ -13,6 +13,9 @@ public class Involve_leetcode14_MyPow {
         if (n == 0) {
             return 1;
         }
+        if (n == Integer.MIN_VALUE) {
+            return 0;
+        }
         int pow = Math.abs(n);
         double ans = 1;
         double t = x;

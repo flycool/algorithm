@@ -1,11 +1,108 @@
 package everyday;
 
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Stack;
+import java.util.*;
 
 public class LeetCodeTest {
+
+    public int subarraySum(int[] nums, int k) {
+        int n = nums.length;
+        int ans = 0;
+        int preSum = 0;
+        HashMap<Integer, Integer> map = new HashMap<>();
+        map.put(0, 1);
+        for (int i = 0; i < n; i++) {
+            preSum += nums[i];
+            if (map.containsKey(preSum - k)) {
+                ans += map.get(preSum - k);
+            }
+            map.put(preSum, map.getOrDefault(preSum,0) + 1);
+        }
+        return ans;
+    }
+
+    public int[] dailyTemperatures(int[] temperatures) {
+        int n = temperatures.length;
+        int[] ans = new int[n];
+        LinkedList<Integer> stack = new LinkedList<>();
+        for (int i = 0; i < n; i++) {
+            int temp = temperatures[i];
+            while (!stack.isEmpty() && temp > temperatures[stack.peek()]) {
+                int preIndex = stack.pop();
+                ans[preIndex] = i - preIndex;
+            }
+            stack.push(i);
+        }
+        return ans;
+    }
+
+    public int findUnsortedSubarray(int[] nums) {
+        int n = nums.length;
+        int max = Integer.MIN_VALUE, min = Integer.MAX_VALUE;
+        int r = -1, l = -1;
+        for (int i = 0; i < n; i++) {
+            if (max > nums[i]) {
+                r = i;
+            } else {
+                max = nums[i];
+            }
+            if (min < nums[n - i - 1]) {
+                l = n - i - 1;
+            } else {
+                min = nums[n - i - 1];
+            }
+        }
+        return r == -1 ? 0 : r - l + 1;
+    }
+
+    public int hammingDistance(int x, int y) {
+        int ans = x ^ y;
+        int count = 0;
+        while (ans != 0) {
+            ans &= (ans - 1);
+            count++;
+        }
+        return count;
+    }
+
+    public int[] topKFrequent(int[] nums, int k) {
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for (int num : nums) {
+            map.put(num, map.getOrDefault(num, 0) + 1);
+        }
+        PriorityQueue<int[]> queue = new PriorityQueue<>((a, b) -> b[1] - a[1]);
+        map.forEach((key, value) -> {
+            int[] a = {key, value};
+            queue.add(a);
+        });
+        int[] ans = new int[k];
+        for (int i = 0; i < k; i++) {
+            ans[i] = queue.poll()[0];
+        }
+        return ans;
+    }
+
+    public List<Integer> findDisappearedNumbers(int[] nums) {
+        int n = nums.length;
+        for (int num : nums) {
+            int x = (num - 1) % n;
+            nums[x] += n;
+        }
+        ArrayList<Integer> ans = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            if (nums[i] <= n) {
+                ans.add(i + 1);
+            }
+        }
+        return ans;
+    }
+
+    public int[] countBits(int n) {
+        int[] ans = new int[n + 1];
+        for (int i = 1; i <= n; i++) {
+            ans[i] = ans[i & (i - 1)] + 1;
+        }
+        return ans;
+    }
 
 
     public int uniquePaths(int m, int n) {
@@ -25,9 +122,9 @@ public class LeetCodeTest {
     }
 
 
-
     class LRUCache extends LinkedHashMap<Integer, Integer> {
-        private int mCapacity=0;
+        private int mCapacity = 0;
+
         public LRUCache(int capacity) {
             super(capacity, 0.75f, true);
             mCapacity = capacity;
