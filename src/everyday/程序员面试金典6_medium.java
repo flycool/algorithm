@@ -4,6 +4,210 @@ import java.util.*;
 
 public class 程序员面试金典6_medium {
 
+
+    //面试题 16.26. 计算器
+    //"31+2*2"
+    public int calculate(String s) {
+        int n = s.length();
+        Stack<Integer> stack = new Stack<>();
+        int num = 0;
+        char preSign = '+';
+        for (int i = 0; i < n; i++) {
+            if (Character.isDigit(s.charAt(i))) {
+                num = num * 10 + (s.charAt(i) - '0');
+            }
+            if (!Character.isDigit(s.charAt(i)) && s.charAt(i) != ' ' || i == n - 1) {
+                switch (preSign) {
+                    case '+':
+                        stack.push(num);
+                        break;
+                    case '-':
+                        stack.push(-num);
+                        break;
+                    case '*':
+                        stack.push(stack.pop() * num);
+                        break;
+                    case '/':
+                        stack.push(stack.pop() / num);
+                        break;
+                }
+                preSign = s.charAt(i);
+                num = 0;
+            }
+        }
+        int ans = 0;
+        while (!stack.isEmpty()) {
+            ans += stack.pop();
+        }
+        return ans;
+    }
+
+
+    //面试题 08.11. 硬币
+    int[] coins = {25, 10, 5, 1};
+    private static final int mod = 1000000007;
+
+    public int waysToChange(int n) {
+        int[] f = new int[n + 1];
+        f[0] = 1;
+        for (int c = 0; c < 4; c++) {
+            int coin = coins[c];
+            for (int i = coin; i <= n; i++) {
+                f[i] = (f[i] + f[i - coin]) % mod;
+            }
+        }
+        return f[n];
+    }
+
+
+    //面试题 10.10. 数字流的秩
+    class StreamRank {
+        private List<Integer> array;
+
+        public StreamRank() {
+            array = new ArrayList<>();
+        }
+
+        public void track(int x) {
+            int index = getRankOfNumber(x);
+            array.add(index, x);
+        }
+
+        public int getRankOfNumber(int x) {
+            int n = array.size();
+            if (n == 0) return 0;
+            int l = 0, r = n - 1;
+            while (l <= r) {
+                int mid = (l + r) / 2;
+                if (array.get(mid) <= x) {
+                    l = mid + 1;
+                } else {
+                    r = mid - 1;
+                }
+            }
+            return l;
+        }
+    }
+
+    //面试题 16.24. 数对和
+    public List<List<Integer>> pairSums(int[] nums, int target) {
+        List<List<Integer>> ans = new ArrayList<>();
+        Arrays.sort(nums);
+        int l = 0, r = nums.length - 1;
+        while (l < r) {
+            int sum = nums[l] + nums[r];
+            if (sum == target) {
+                ArrayList<Integer> t = new ArrayList<>();
+                t.add(nums[l++]);
+                t.add(nums[r--]);
+                ans.add(t);
+            } else if (sum < target) {
+                l++;
+            } else {
+                r--;
+            }
+        }
+        return ans;
+    }
+
+    //面试题 16.21. 交换和
+    public int[] findSwapValues(int[] array1, int[] array2) {
+        int sum1 = 0;
+        int sum2 = 0;
+        HashSet<Integer> set = new HashSet<>();
+        for (int i : array1) {
+            sum1 += i;
+        }
+        for (int i : array2) {
+            set.add(i);
+            sum2 += i;
+        }
+        int diff = sum1 - sum2;
+        if (diff % 2 != 0) return new int[]{};
+        diff /= 2;
+        for (int num : array1) {
+            if (set.contains(num - diff)) {
+                return new int[]{num, num - diff};
+            }
+        }
+        return new int[]{};
+    }
+
+    //面试题 17.07. 婴儿名字
+    public String[] trulyMostPopular(String[] names, String[] synonyms) {
+        HashMap<String, Integer> map = new HashMap<>();
+        HashMap<String, String> unionMap = new HashMap<>();
+        for (String name : names) {
+            String[] split = name.split("\\(");
+            String res = split[1].substring(0, split[1].length() - 1);
+            int count = Integer.valueOf(res);
+            map.put(split[0], count);
+        }
+        for (String pair : synonyms) {
+            int i = pair.indexOf(",");
+            String name1 = pair.substring(1, i);
+            String name2 = pair.substring(i + 1, pair.length() - 1);
+
+            while (unionMap.containsKey(name1)) {
+                name1 = unionMap.get(name1);
+            }
+            while (unionMap.containsKey(name2)) {
+                name2 = unionMap.get(name2);
+            }
+
+            if (!name1.equals(name2)) {
+                int count = map.getOrDefault(name1, 0) + map.getOrDefault(name2, 0);
+                String trulyName = name1.compareTo(name2) < 0 ? name1 : name2;
+                String nickName = name1.compareTo(name2) < 0 ? name2 : name1;
+                unionMap.put(nickName, trulyName);
+                map.remove(nickName);
+                map.put(trulyName, count);
+            }
+        }
+        String[] ans = new String[map.size()];
+        int index = 0;
+        for (String name : map.keySet()) {
+            StringBuilder sb = new StringBuilder(name);
+            sb.append("(");
+            sb.append(map.get(name));
+            sb.append(")");
+            ans[index++] = sb.toString();
+        }
+        return ans;
+    }
+
+    //面试题 17.05.  字母与数字
+    public String[] findLongestSubarray(String[] array) {
+        HashMap<Integer, Integer> map = new HashMap<>();
+        map.put(0, -1);
+        int n = array.length;
+        int maxLen = 0;
+        int startIndex = -1;
+        int sum = 0;
+        for (int i = 0; i < n; i++) {
+            if (Character.isLetter(array[i].charAt(0))) {
+                sum++;
+            } else {
+                sum--;
+            }
+            if (map.containsKey(sum)) {
+                int firstIndex = map.get(sum);
+                if (i - firstIndex > maxLen) {
+                    maxLen = i - firstIndex;
+                    startIndex = firstIndex + 1;
+                }
+            } else {
+                map.put(sum, i);
+            }
+        }
+        if (maxLen == 0) {
+            return new String[0];
+        }
+        String[] ans = new String[maxLen];
+        System.arraycopy(array, startIndex, ans, 0, maxLen);
+        return ans;
+    }
+
     //输入: [5, 3, 1, 2, 3]
     //输出: [5, 1, 3, 2, 3]
     //面试题 10.11. 峰与谷
