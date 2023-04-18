@@ -66,6 +66,7 @@ public class Code18_parenthesesDye {
         }
         int ans = 0;
         if (arr[i] > 0) {
+            // 是左括号，左括号比右括号又多了一个，所以 j+1
             ans = f(arr, i + 1, j + 1, dp);
         } else {
             //左括号和后括号的可能
