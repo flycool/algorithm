@@ -100,7 +100,7 @@ public class SegmentTree {
         sum[rt] = sum[rt << 1] + sum[rt << 1 | 1];
     }
 
-    // 下发任务
+    // 下发所有之前积累下来的任务
     // ln:左孩子数量
     // rn:右孩子数量
     private void pushDown(int rt, int ln, int rn) {
