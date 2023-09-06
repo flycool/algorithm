@@ -1,7 +1,5 @@
 package latest2023;
 
-import javafx.geometry.Point3D;
-
 /**
  * 04 来自微众银行
  * 两个魔法卷轴问题
