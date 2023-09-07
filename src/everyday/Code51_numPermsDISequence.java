@@ -10,9 +10,9 @@ package everyday;
  * 如果s[i订='I',那么perm[i]<perm[i+1]。
  * 返回有效排列perm的数量。因为答案可能很大，所以请返回你的答案对10^9+7取余。
  * 测试链接：
- * <a href="https://leetcode.cn/problems/valid-permutations-for-di-sequence">leetcode</a>
+ * @see <a href="https://leetcode.cn/problems/valid-permutations-for-di-sequence">leetcode</a>
  *
- * see: latest2023.Code02_numPermsDISequence
+ *  latest2023.Code02_numPermsDISequence
  */
 public class Code51_numPermsDISequence {
 }

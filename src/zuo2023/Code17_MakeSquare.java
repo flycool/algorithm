@@ -25,7 +25,7 @@ public class Code17_MakeSquare {
     //status: 火柴使用的状态
     public boolean process(int[] arr, int status, long sum, long len, int edges, int[] dp) {
         if (edges == 0) {
-            int s = 1 << arr.length - 1;
+            int s = 1 << arr.length - 1; // 全1的状态
             return status == s;
         }
         if (dp[status] != 0) {

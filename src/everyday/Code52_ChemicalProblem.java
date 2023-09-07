@@ -13,7 +13,8 @@ package everyday;
  * 研究员想要知道物质含量最多是多少
  * 对于所有数据，1<=n,v[i]，w[i],x,c<=1000
  *
- * see: latest2023.Code01_ChemicalProblem
+ * {@link  latest2023.Code01_ChemicalProblem}
  */
 public class Code52_ChemicalProblem {
+
 }
