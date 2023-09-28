@@ -1,5 +1,6 @@
-package segmenttree;
+package struct.segmenttree;
 
+//线段树
 public class SegmentTree {
 
     private final int[] arr;
