@@ -1,7 +1,7 @@
 package interview;
 
-import com.sun.org.apache.bcel.internal.classfile.Code;
-import java.util.concurrent.locks.*;
+//import com.sun.org.apache.bcel.internal.classfile.Code;
+//import java.util.concurrent.locks.*;
 
 public class Code02_ {
 

@@ -2,6 +2,7 @@ package intermediate_promote.class02;
 
 import java.util.Stack;
 
+@SuppressWarnings("ALL")
 public class Code03_ReverseStack {
     //把一个stack逆序,只能用一个额外的stack
     public static Stack reverseStack(Stack<Integer> stack) {
