@@ -1,6 +1,6 @@
-package zuo2025.junior.class06;
+package zuo2025.junior.class09.link;
 
-public class C09_ListReverse {
+public class C01_ListReverse {
 
     public static class ListNode {
         int val;
