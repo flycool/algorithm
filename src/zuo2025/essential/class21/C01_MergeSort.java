@@ -1,4 +1,4 @@
-package zuo2025.junior.class21;
+package zuo2025.essential.class21;
 
 public class C01_MergeSort {
 
@@ -6,6 +6,7 @@ public class C01_MergeSort {
 
     public int[] help = new int[n];
 
+    // o(n*logn)
     public void mergeSort(int[] arr, int l, int r) {
         if (l == r) {
             return;
