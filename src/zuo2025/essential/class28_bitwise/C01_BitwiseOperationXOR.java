@@ -1,6 +1,6 @@
-package zuo2025.essential.class28;
+package zuo2025.essential.class28_bitwise;
 
-public class C01_BitwiseOperation {
+public class C01_BitwiseOperationXOR {
 
     /**
      * 异或运算的性质：

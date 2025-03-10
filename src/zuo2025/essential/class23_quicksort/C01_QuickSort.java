@@ -1,4 +1,4 @@
-package zuo2025.essential.class23;
+package zuo2025.essential.class23_quicksort;
 
 public class C01_QuickSort {
 

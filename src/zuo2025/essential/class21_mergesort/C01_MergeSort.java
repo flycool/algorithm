@@ -1,4 +1,4 @@
-package zuo2025.essential.class21;
+package zuo2025.essential.class21_mergesort;
 
 public class C01_MergeSort {
 

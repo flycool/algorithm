@@ -1,4 +1,4 @@
-package zuo2025.essential.class25;
+package zuo2025.essential.class25_heap;
 
 public class C01_Heap {
 
