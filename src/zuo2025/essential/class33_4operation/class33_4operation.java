@@ -1,5 +1,11 @@
 package zuo2025.essential.class33_4operation;
 
+/**
+ * 加法：利用每一步无进位相加的结果 + 进位的结果不停计算，直到进位消失
+ * 减法：利用加法，和一个数字x相反数就是(~x)+1
+ * 乘法：常规乘法，没别的了
+ * 除法：为了防止溢出，让被除数右移，而不是除数左移。从高位尝试到低位
+ */
 public class class33_4operation {
 
     public int add(int a, int b) {
