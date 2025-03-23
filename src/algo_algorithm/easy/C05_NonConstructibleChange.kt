@@ -1,6 +1,6 @@
 package algo_algorithm.easy
 
-class NonConstructibleChange {
+class C05_NonConstructibleChange {
 
     fun nonConstructibleChange(coins: MutableList<Int>): Int {
         coins.sorted()
