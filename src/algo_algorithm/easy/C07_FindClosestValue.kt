@@ -2,12 +2,8 @@ package algo_algorithm.easy
 
 import kotlin.math.abs
 
-open class TreeNode(val value: Int) {
-    var left: TreeNode? = null
-    var right: TreeNode? = null
-}
 
-fun findClosestValueInBST(root: TreeNode?, target: Int): Int {
+fun findClosestValueInBST(root: BinaryTree?, target: Int): Int {
     var closestValue = root?.value!!
     var curNode = root
     while (curNode != null) {
