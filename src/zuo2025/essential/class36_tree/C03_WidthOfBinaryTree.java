@@ -12,6 +12,7 @@ public class C03_WidthOfBinaryTree {
     private final TreeNode[] nq = new TreeNode[n];
     private final int[] iq = new int[n];
 
+    // https://leetcode-cn.com/problems/maximum-width-of-binary-tree/
     public int widthOfBinaryTree(TreeNode root) {
         int ans = 1;
         int l = 0, r = 0;
