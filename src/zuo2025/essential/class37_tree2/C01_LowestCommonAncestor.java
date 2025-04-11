@@ -12,6 +12,8 @@ public class C01_LowestCommonAncestor {
         }
     }
 
+    // 注意：问题1又叫 lca 问题，非常重要的问题
+    // Tarjan算法解决lca的批量查询，树链剖分算法lca的在线查询，在后续讲述
     // 1. 普通二叉树寻找两个节点的最近公共祖先
     // https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
